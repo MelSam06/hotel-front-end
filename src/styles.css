@@ -1,1 +1,152 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* ===== Grid Layout ===== */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 4fr 1fr 4fr 1fr;
+}
+
+/* ===== Hero Header ===== */
+.hero {
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* ===== Button ===== */
+.btn-primary {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background: #c8a96a;
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #b89652;
+  transform: translateY(-2px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  min-height: 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: #c8a96a;
+}
+
+/* ===== Main ===== */
+.main-content {
+  min-height: 0;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  background: #f8f8f8;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+/* Feature cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Footer ===== */
+.footer {
+  min-height: 0;
+  background: #1f1f1f;
+  color: #bbb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+}
