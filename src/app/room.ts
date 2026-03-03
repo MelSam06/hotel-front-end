@@ -5,4 +5,5 @@ export interface Room {
   roomFloor: number;
   privateBathroom: boolean;
   pricePerNight: number;
+  image: string;
 }

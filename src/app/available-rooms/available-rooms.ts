@@ -1,5 +1,5 @@
 import {Component, Signal} from '@angular/core';
-import {RoomsService} from '../rooms-service';
+import {RoomsService} from '../services/rooms/rooms-service';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {Room} from '../room';
 

@@ -9,6 +9,11 @@
       <tr>
         <td>{{r.roomNumber}}</td>
         <td>{{r.pricePerNight}}</td>
+        <td>
+          <div class="image-container">
+            <img [src]="r.image" alt="Immagine stanza"/>
+          </div>
+        </td>
       </tr>
     }
   </tbody>
