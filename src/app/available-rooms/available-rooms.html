@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Numero stanza</th><th>Prezzo per notte</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(r of rooms(); track r.roomNumber) {
+      <tr>
+        <td>{{r.roomNumber}}</td>
+        <td>{{r.pricePerNight}}</td>
+        <td>
+          <div class="image-container">
+            <img [src]="r.image" alt="Immagine stanza"/>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
