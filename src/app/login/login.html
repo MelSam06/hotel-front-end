@@ -1,7 +1,7 @@
-<form>
+<form (ngSubmit)="login()">
   E-mail: <br/>
-  <input type="text"><br/><br/>
+  <input type="text" [(ngModel)]="email" name="email"><br/><br/>
   Password: <br/>
-  <input type="password"><br/><br/>
-  <button (click)="login()">Login</button>
+  <input type="password" [(ngModel)]="password" name="password"><br/><br/>
+  <button type="submit">Login</button>
 </form>
