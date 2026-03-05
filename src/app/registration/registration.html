@@ -1,13 +1,25 @@
-<form>
+<form (ngSubmit)="register()">
   Firstname: <br/>
-  <input type="text"><br/><br/>
+  <input type="text" [(ngModel)]="firstName" name="firstName"><br/><br/>
+  
   Lastname: <br/>
-  <input type="text"><br/><br/>
-   E-mail: <br/>
-  <input type="text"><br/><br/>
-   Password: <br/>
-  <input type="password"><br/><br/>
-  <button (click)="register()">Register</button>
+  <input type="text" [(ngModel)]="lastName" name="lastName"><br/><br/>
+  
+  E-mail: <br/>
+  <input type="text" [(ngModel)]="email" name="email"><br/><br/>
+  
+  Password: <br/>
+  <input type="password" [(ngModel)]="password" name="password"><br/><br/>
+  
+  <button type="submit" >Register</button>
 </form>
 
- 
+ <!--
+<form (ngSubmit)="register()" #registerForm="ngForm">
+  <input name="firstName" [(ngModel)]="user.firstName" required placeholder="Nome">
+  <input name="lastName" [(ngModel)]="user.lastName" required placeholder="Cognome">
+  <input name="email" [(ngModel)]="user.email" type="email" required placeholder="Email">
+  <input name="password" [(ngModel)]="user.password" type="password" required placeholder="Password">
+  <button type="submit">Registrati</button>
+</form>
+-->
