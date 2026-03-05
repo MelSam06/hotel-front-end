@@ -198,6 +198,10 @@ body {
 .login button:active{
   transform: scale(0.98);
 }
+
+.login a{
+  color: goldenrod;
+}
 .registration{
    display: flex;
   flex-direction: column;
