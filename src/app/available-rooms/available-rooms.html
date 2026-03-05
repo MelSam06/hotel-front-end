@@ -5,7 +5,7 @@
     </tr>
   </thead>
   <tbody>
-    @for(r of rooms(); track r.roomNumber) {
+    @for(r of availableRooms(); track r.roomNumber) {
       <tr>
         <td>{{r.roomNumber}}</td>
         <td>{{r.pricePerNight}}</td>
