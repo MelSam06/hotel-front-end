@@ -1,0 +1,7 @@
+.login-buttons {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  display: flex;
+  gap: 10px;
+}

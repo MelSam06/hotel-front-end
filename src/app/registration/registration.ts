@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RegistrationService } from '../services/registration/registration-service';
 
 import { FormsModule } from '@angular/forms';
+import {CustomerService} from '../services/customer/customer-service';
 @Component({
   selector: 'app-registration',
   imports:[FormsModule],
@@ -13,45 +14,15 @@ export class Registration {
 
   firstName: string = '';
   lastName: string = '';
+  dateOfBirthForm: string = '';
+  phone: string = '';
+  city: string = '';
   email: string = '';
   password: string = '';
 
-  constructor(private registrationService: RegistrationService) {}
+  constructor(private registrationService: RegistrationService, private customerService: CustomerService) {}
 
   register(){
-  console.log(this.firstName, this.lastName, this.email, this.password);
-
-  const user = {
-    firstName: this.firstName,
-    lastName: this.lastName,
-    email: this.email,
-    password: this.password
-  };
-
-  this.registrationService.register(user).subscribe({
-    next: () => {
-      console.log("Registrazione completata");
-      alert("Utente registrato!");
-    },
-    error: (err) => {
-      console.error(err);
-      alert("Errore nella registrazione");
-    }
-  });
-}
- /*register(){
-    console.log(this.firstName, this.lastName, this.email, this.password);
-   const user = {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      password: this.password
-    };
-    this.registrationService.register(user);
-  }*/
-
-  /*register() {
-
     const user = {
       firstName: this.firstName,
       lastName: this.lastName,
@@ -59,28 +30,28 @@ export class Registration {
       password: this.password
     };
 
-    this.registrationService.register(user).subscribe({
-      next: () => alert('Registrazione completata'),
-      error: (err) => alert('Errore: ' + err.message)
+    const customer = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      dateOfBirth: new Date(this.dateOfBirthForm).toISOString().slice(0, 10),
+      email: this.email,
+      phone: this.phone,
+      city: this.city
+    }
+
+    this.registrationService.register(user).subscribe(() => {
+      this.customerService.register(customer).subscribe({
+        next: () => {
+          alert("Utente registrato!");
+        },
+        error: (err) => {
+          console.error(err);
+          alert("Errore nella registrazione dell'utente");
+        }
+      })
     });
 
-  } */
- /*async register() {
-  
-    const user = {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      password: this.password
-    };
-  try {
-    await firstValueFrom(this.registrationService.register(user));
-    alert('Registrazione completata');
-  } catch (err: any) {
-    alert('Errore: ' + err.message);
   }
-}*/
-  
 }
 
 

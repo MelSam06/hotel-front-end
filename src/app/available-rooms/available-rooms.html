@@ -1,11 +1,12 @@
-<table>
+<app-available-rooms class= "availableRooms">
+ <table>
   <thead>
     <tr>
       <th>Numero stanza</th><th>Prezzo per notte</th>
     </tr>
   </thead>
   <tbody>
-    @for(r of rooms(); track r.roomNumber) {
+    @for(r of availableRooms(); track r.roomNumber) {
       <tr>
         <td>{{r.roomNumber}}</td>
         <td>{{r.pricePerNight}}</td>
@@ -17,4 +18,7 @@
       </tr>
     }
   </tbody>
-</table>
+ </table>
+</app-available-rooms>
+
+

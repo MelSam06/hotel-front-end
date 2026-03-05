@@ -12,7 +12,7 @@ export class RoomsService {
   getRooms():Observable<Room[]> {
     return this.http.get<Room[]>(`${this.apiUrl}`);
   }
-  getRoomsAvailableInDateRange():Observable<Room[]> {
-    return this.http.get<Room[]>(`${this.apiUrl}`);
+  getRoomsAvailableInDateRange(checkInDate: string, checkOutDate: string, capacity: number):Observable<Room[]> {
+    return this.http.get<Room[]>(`${this.apiUrl}?checkInDate=${checkInDate}&checkOutDate=${checkOutDate}&capacity=${capacity}`);
   }
 }
