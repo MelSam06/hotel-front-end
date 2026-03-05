@@ -1,0 +1,18 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient} from '@angular/common/http';
+
+export interface UtilityRequest{
+  name: string;
+  price: number;
+}
+@Injectable({
+  providedIn: 'root',
+})
+export class UtilityService {
+  private apiUrl: string = 'http://localhost:8080/api';
+  constructor(private http: HttpClient) { }
+  findAll(): Observable<UtilityRequest[]>{
+    return this.http.get<UtilityRequest[]>(`${this.apiUrl}/reservation_utilities`);
+  }
+}

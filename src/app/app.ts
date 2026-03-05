@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import {Component, Signal, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
 import { Navbar } from "./navbar/navbar";
+import {Utilities} from './utilities/utilities';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,5 @@ import { Navbar } from "./navbar/navbar";
 })
 export class App {
   protected readonly title = signal('hotel-front-end');
+  utilities!: Signal<Utilities[]>
 }

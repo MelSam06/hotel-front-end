@@ -1,0 +1,18 @@
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Prezzo</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (u of list; track u.id){
+        <tr>
+          <td>{{u.name}}</td>
+          <td>{{u.price}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
