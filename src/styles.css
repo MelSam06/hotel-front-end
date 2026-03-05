@@ -138,14 +138,38 @@ body {
 }
 
 /* ===== Footer ===== */
+/*.socialmedia{
+  align-items: center;
+}*/
 .footer {
-  min-height: 0;
+  min-height: 0; 
   background: #1f1f1f;
-  color: #bbb;
-
+  color: #bbb; 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 0.9rem;
 }
+/*.footer{
+  background: #1f1f1f;
+  color: #bbb;
+  padding: 20px;
+}
+
+/* icone social 
+.socialmedia i{
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.socialmedia:hover {
+  color: white;
+}
+
+/* copyright sotto 
+.copyright{
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}*/

@@ -1,7 +1,8 @@
 <form (ngSubmit)="register()">
+  
   Firstname: <br/>
   <input type="text" [(ngModel)]="firstName" name="firstName"><br/><br/>
-  
+
   Lastname: <br/>
   <input type="text" [(ngModel)]="lastName" name="lastName"><br/><br/>
   
@@ -9,7 +10,7 @@
   <input type="text" [(ngModel)]="email" name="email"><br/><br/>
   
   Password: <br/>
-  <input type="password" [(ngModel)]="password" name="password"><br/><br/>
+  <input type="password" [(ngModel)]="password" name="password" required><br/><br/>
   
   <button type="submit" >Register</button>
 </form>

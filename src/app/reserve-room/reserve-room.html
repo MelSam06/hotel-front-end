@@ -1,9 +1,11 @@
 <form (ngSubmit)="findAvailableRooms()">
   <label for="date">Quando vorreste pernottare?</label><br/>
   DA:
-  <input type="date" [(ngModel)]="checkInDateForm" name="checkInDate"><br/>
+  <input type="date" [(ngModel)]="checkInDateForm" name="checkInDate">
+  <br>
   A:
-  <input type="date" [(ngModel)]="checkOutDateForm" name="checkOutDate"><br/>
+  <input type="date" [(ngModel)]="checkOutDateForm" name="checkOutDate">
+  <br>
   <label for="capacity">Quanti ospiti?</label><br/>
   <input type="number" min="1" max="8" [(ngModel)]="capacity" name="capacity"><br/><br/>
   <button type="submit">Cerca stanze</button>

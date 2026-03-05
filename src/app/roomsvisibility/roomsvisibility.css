@@ -1,0 +1,277 @@
+/*.main-title{
+    color:#740001;
+    font-size:xx-large;
+
+}
+.rooms-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.room-card {
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: white;
+  transition: transform 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 15px;
+}
+
+.room-info h3 {
+  margin: 0 0 10px 0;
+}
+
+.room-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.book-btn {
+  background: #740001; /* rosso Gryffindor 
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #a00000;
+} 
+ .rooms-section{
+  padding:60px 80px;
+  background:#f5f5f5;
+}
+.rooms-gallery{
+  display:flex;
+  gap:5px;
+  margin-top:40px;
+}
+.room-card{
+  flex:1;
+}
+
+.room-card img{
+  width:50%;
+  height:320px;
+  object-fit:cover;
+  border-radius:4px;
+  transition:transform 0.3s;
+}
+.room-card img:hover{
+  transform:scale(1.03);
+}
+.rooms-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:40px;
+}
+.room-card {
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: white;
+  transition: transform 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.rooms-title h1{
+  font-size:80px;
+  font-weight:300;
+  color:#b57a3f;
+  letter-spacing:3px;
+}
+
+.rooms-description{
+  width:50%;
+  font-size:18px;
+  line-height:1.7;
+  color:#1e2a38;
+}
+
+.rooms-gallery{
+  display:flex;
+  gap:30px;
+}
+
+.rooms-gallery img{
+  width:33%;
+  height:320px;
+  object-fit:cover;
+  border-radius:4px;
+  transition:transform 0.3s;
+}
+.room-info {
+  padding: 15px;
+}
+
+.room-info h3 {
+  margin: 0 0 10px 0;
+}
+
+.room-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.book-btn {
+  background: #740001;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #a00000;
+} 
+
+.rooms-gallery img:hover{
+  transform:scale(1.03);
+}*/
+.top-title{
+    padding:60px 80px;
+  background:#f5f5f5;
+}
+.rooms-description{
+    display:flex;
+  justify-content:space-between;
+  margin-bottom:40px;
+}
+.title h1{
+    font-size:80px;
+  font-weight:300;
+  color:#b57a3f; 
+}
+.descriptionss{
+    width:50%;
+  font-size:18px;
+  line-height:1.7;
+  color:#1e2a38;
+}
+.rooms-section{
+  padding:60px 80px;
+  background:#f5f5f5;
+}
+
+/* FLOOR */
+
+.floor{
+  margin-bottom:60px;
+}
+
+.floor-title{
+  font-size:32px;
+  margin-bottom:25px;
+  color:#b57a3f;
+  letter-spacing:2px;
+}
+
+/* GALLERY */
+
+.rooms-gallery{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+/* CARD */
+
+.room-card{
+  width:320px; /* prima 250px*/
+  border-radius:10px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+  transition:transform 0.3s;
+}
+
+.room-card:hover{
+  transform:translateY(-6px);
+}
+
+.room-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.room-card h4{
+  padding:12px;
+  font-size:16px;
+}
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.book-btn {
+  background: #740001; /* rosso Gryffindor */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #a00000;
+}
