@@ -24,10 +24,6 @@ export class Login {
     }
     this.loginService.login(user).subscribe({
         next: () => {
-          let customerObservable = this.customerService.findByEmail(user.email);
-          customerObservable.subscribe(customer => {
-            console.log(customer);
-          })
           alert("Login effettuato!");
           this.router.navigate(['/home']);
         },

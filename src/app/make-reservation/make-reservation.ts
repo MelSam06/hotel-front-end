@@ -25,6 +25,9 @@ export class MakeReservation {
   ngOnInit() {
     this.room = history.state.room;
     this.reservation.roomNumber = this.room.roomNumber;
+    this.loginService.customerObservable.subscribe(customer => {
+      console.log(customer);
+    })
   }
 
   constructor(private reservationService: ReservationService, private loginService: LoginService) {}
