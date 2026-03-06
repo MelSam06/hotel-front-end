@@ -6,6 +6,7 @@ export interface UtilityRequest{
   utilityId: number;
   utilityName: string;
   price: number;
+  utilityDescription: string;
 }
 @Injectable({
   providedIn: 'root',
