@@ -3,6 +3,7 @@ import { RegistrationService } from '../services/registration/registration-servi
 
 import { FormsModule } from '@angular/forms';
 import {CustomerService} from '../services/customer/customer-service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-registration',
   imports:[FormsModule],
@@ -20,7 +21,7 @@ export class Registration {
   email: string = '';
   password: string = '';
 
-  constructor(private registrationService: RegistrationService, private customerService: CustomerService) {}
+  constructor(private registrationService: RegistrationService, private customerService: CustomerService, private router: Router) {}
 
   register(){
     const user = {
@@ -34,8 +35,8 @@ export class Registration {
       firstName: this.firstName,
       lastName: this.lastName,
       dateOfBirth: new Date(this.dateOfBirthForm).toISOString().slice(0, 10),
-      email: this.email,
       phone: this.phone,
+      email: this.email,
       city: this.city
     }
 
@@ -43,6 +44,7 @@ export class Registration {
       this.customerService.register(customer).subscribe({
         next: () => {
           alert("Utente registrato!");
+          this.router.navigate(['/login']);
         },
         error: (err) => {
           console.error(err);

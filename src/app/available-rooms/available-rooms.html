@@ -1,4 +1,4 @@
-<app-available-rooms class= "availableRooms">
+<div class= "availableRooms">
  <table>
   <thead>
     <tr>
@@ -15,10 +15,13 @@
             <img [src]="r.image" alt="Immagine stanza"/>
           </div>
         </td>
+        <td>
+          <button (click)="goToRoom(r)">Prenota stanza</button>
+        </td>
       </tr>
     }
   </tbody>
  </table>
-</app-available-rooms>
+</div>
 
 
