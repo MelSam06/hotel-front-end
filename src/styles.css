@@ -1,4 +1,5 @@
 /* ===== Reset ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -151,6 +152,7 @@ body {
   text-align: center;
   font-size: 0.9rem;
 }
+/* ===== login ===== */
 .login {
   display: flex;
   flex-direction: column;
@@ -199,6 +201,7 @@ body {
 .login button:active{
   transform: scale(0.98);
 }
+/*==registration==*/
 .registration{
   display: flex;
   flex-direction: column;
@@ -240,12 +243,113 @@ body {
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
 }
-
 .registration button:hover{
   background: #b5892f;
 }
 
 .registration button:active{
   transform: scale(0.98);
+}
+
+/*==reserve room==*/
+.reserveRoom{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+
+  max-width: 400px;
+  margin: 2rem auto;
+
+}
+.reserveRoom input{
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.reserveRoom input:focus{
+  outline: none;
+  border-color: #6c8cff;
+  box-shadow: 0 0 0 2px rgba(108,140,255,0.15);
+}
+.reserveRoom button{
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background: #c89b3c;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.reserveRoom button:hover{
+  background: #b5892f;
+}
+
+.reserveRoom button:active{
+  transform: scale(0.98);
+}
+/* ===== available rooms ===== */
+
+.availableRooms{
+  max-width: 700px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.availableRooms table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.availableRooms th{
+  text-align: left;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.availableRooms td{
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.availableRooms tr{
+  transition: background 0.2s ease;
+}
+
+.availableRooms tr:hover{
+  background: #fafafa;
+}
+
+/* ===== immagini stanze ===== */
+
+.image-container{
+  width: 90px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
