@@ -7,9 +7,9 @@
     </tr>
     </thead>
     <tbody>
-      @for (u of list; track u.id){
+      @for (u of list(); track u.utilityId){
         <tr>
-          <td>{{u.name}}</td>
+          <td>{{u.utilityName}}</td>
           <td>{{u.price}}</td>
         </tr>
       }
