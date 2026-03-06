@@ -5,6 +5,7 @@ import {AvailableRooms} from './available-rooms/available-rooms';
 import {Login} from './login/login';
 import {Registration} from './registration/registration';
 import { Roomsvisibility } from './roomsvisibility/roomsvisibility';
+import {MakeReservation} from './make-reservation/make-reservation';
 
 export const routes: Routes = [
     { path : '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,4 +15,5 @@ export const routes: Routes = [
     { path: 'login', component: Login},
     { path : 'registration', component: Registration},
     {path : 'roomsvisibility', component: Roomsvisibility},
+    { path : 'make-reservation', component: MakeReservation},
 ];
