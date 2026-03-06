@@ -14,4 +14,8 @@ export class CustomerService {
   register(data: { firstName: string; lastName: string; dateOfBirth: string; email: string; phone: string; city: string; }): Observable<any> {
     return this.http.post(`${this.apiUrl}`, data);
   }
+
+  findByEmail(email: string) {
+    return this.http.get(`${this.apiUrl}?email=${email}`);
+  }
 }

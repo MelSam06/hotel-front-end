@@ -2,6 +2,7 @@ import {Component, signal, Signal} from '@angular/core';
 import {Room} from '../room';
 import {ReservationService} from '../services/reservation/reservation-service';
 import {Reservation} from '../reservation';
+import {LoginService} from '../services/login/login-service';
 
 @Component({
   selector: 'app-make-reservation',
@@ -15,7 +16,7 @@ export class MakeReservation {
   reservation: Reservation = {
     id: 0,
     resOrderId: 0,
-    roomNumber: this.room.roomNumber,
+    roomNumber: 0,
     checkInDate: '',
     checkOutDate: '',
     price: 0,
@@ -23,9 +24,10 @@ export class MakeReservation {
 
   ngOnInit() {
     this.room = history.state.room;
+    this.reservation.roomNumber = this.room.roomNumber;
   }
 
-  constructor(private reservationService: ReservationService) {}
+  constructor(private reservationService: ReservationService, private loginService: LoginService) {}
 
   makeReservation() {
     this.reservationService.makeReservation(this.reservation);
