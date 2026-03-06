@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {FormsModule} from '@angular/forms';
-import {RoomsService} from '../services/rooms/rooms-service';
-import {firstValueFrom} from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { RoomsService } from '../services/rooms/rooms-service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-reserve-room',
-  imports: [ FormsModule],
+  imports: [ FormsModule ],
   standalone: true,
   templateUrl: './reserve-room.html',
   styleUrl: './reserve-room.css',

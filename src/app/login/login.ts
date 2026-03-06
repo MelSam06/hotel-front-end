@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import {LoginService} from '../services/login/login-service';
 import {FormsModule} from '@angular/forms';
-import {RouterLink} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
+import {CustomerService} from '../services/customer/customer-service';
+import {Customer} from '../customer';
+import {observable, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +16,7 @@ import {RouterLink} from '@angular/router';
 export class Login {
   email: string = '';
   password: string = '';
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private customerService: CustomerService, private router: Router) {}
   login() {
     const user = {
       email: this.email,
@@ -22,6 +25,7 @@ export class Login {
     this.loginService.login(user).subscribe({
         next: () => {
           alert("Login effettuato!");
+          this.router.navigate(['/home']);
         },
         error: (err) => {
           console.error(err);
