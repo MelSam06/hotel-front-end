@@ -484,8 +484,8 @@ body {
   margin-top: 1rem;
   padding: 0.7rem;
   border: none;
-  border-radius: 8px;
-  background: #c89b3c;
+  border-radius: 999px;
+  background: #c8a96a;
   color: white;
   font-size: 0.95rem;
   font-weight: 500;
