@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 
 export interface UtilityRequest{
+  utilityId: number;
   name: string;
   price: number;
 }
@@ -13,6 +14,6 @@ export class UtilityService {
   private apiUrl: string = 'http://localhost:8080/api';
   constructor(private http: HttpClient) { }
   findAll(): Observable<UtilityRequest[]>{
-    return this.http.get<UtilityRequest[]>(`${this.apiUrl}/reservation_utilities`);
+    return this.http.get<UtilityRequest[]>(`${this.apiUrl}/utility_prices`);
   }
 }

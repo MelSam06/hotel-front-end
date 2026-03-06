@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {UtilityService} from '../services/utilities/utility-service';
+import {Component} from '@angular/core';
+import {UtilityRequest, UtilityService} from '../services/utilities/utility-service';
 
 @Component({
   selector: 'app-utilities',
@@ -8,23 +8,21 @@ import {UtilityService} from '../services/utilities/utility-service';
   styleUrl: './utilities.css',
 })
 export class Utilities {
-  list: any;
-  id: number = 0;
-  name: string = '';
-  price: number = 0;
-  constructor(private utilityService: UtilityService){}
+  list: UtilityRequest[] = [];
+
+  constructor(private utilityService: UtilityService) {
+  }
+
   ngOnInit() {
     this.getUtilities();
   }
-  getUtilities(){
+
+  getUtilities() {
     this.utilityService.findAll().subscribe({
       next: (data) => {
         this.list = data;
       },
-      error: (err) => console.error("Errore nel caricamento",err)
+      error: (err) => console.error("Errore nel caricamento", err)
     });
-
-
-}
-
+  }
 }
