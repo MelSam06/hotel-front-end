@@ -1,3 +1,5 @@
+<div class = "registration">
+  <h2>Registration</h2><br/>
 <form (ngSubmit)="register()">
   
   Firstname: <br/>
@@ -5,15 +7,25 @@
 
   Lastname: <br/>
   <input type="text" [(ngModel)]="lastName" name="lastName"><br/><br/>
-  
+
+  Date of birth: <br/>
+  <input type="date" [(ngModel)]="dateOfBirthForm" name="dateOfBirth"><br/><br/>
+
+  City of residence: <br/>
+  <input type="text" [(ngModel)]="city" name="city"><br/><br/>
+
   E-mail: <br/>
   <input type="text" [(ngModel)]="email" name="email"><br/><br/>
-  
+
+  Phone: <br/>
+  <input type="text" [(ngModel)]="phone" name="phone"><br/><br/>
+
   Password: <br/>
   <input type="password" [(ngModel)]="password" name="password" required><br/><br/>
   
   <button type="submit" >Register</button>
 </form>
+</div>
 
  <!--
 <form (ngSubmit)="register()" #registerForm="ngForm">
