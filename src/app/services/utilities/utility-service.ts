@@ -4,7 +4,7 @@ import { HttpClient} from '@angular/common/http';
 
 export interface UtilityRequest{
   utilityId: number;
-  name: string;
+  utilityName: string;
   price: number;
 }
 @Injectable({

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, signal, WritableSignal} from '@angular/core';
 import {UtilityRequest, UtilityService} from '../services/utilities/utility-service';
 
 @Component({
@@ -8,7 +8,7 @@ import {UtilityRequest, UtilityService} from '../services/utilities/utility-serv
   styleUrl: './utilities.css',
 })
 export class Utilities {
-  list: UtilityRequest[] = [];
+  list:  WritableSignal<UtilityRequest[]> = signal([]);
 
   constructor(private utilityService: UtilityService) {
   }
@@ -19,8 +19,8 @@ export class Utilities {
 
   getUtilities() {
     this.utilityService.findAll().subscribe({
-      next: (data) => {
-        this.list = data;
+      next: (data: UtilityRequest[]) => {
+        this.list.set(data);
       },
       error: (err) => console.error("Errore nel caricamento", err)
     });
