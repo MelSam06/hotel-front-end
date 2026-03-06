@@ -84,7 +84,7 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
 }
 
 .navbar a {
