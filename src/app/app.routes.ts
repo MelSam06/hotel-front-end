@@ -6,6 +6,7 @@ import {Login} from './login/login';
 import {Registration} from './registration/registration';
 import { Roomsvisibility } from './roomsvisibility/roomsvisibility';
 import {MakeReservation} from './make-reservation/make-reservation';
+import { Utilities } from './utilities/utilities';
 
 export const routes: Routes = [
     { path : '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,4 +17,5 @@ export const routes: Routes = [
     { path : 'registration', component: Registration},
     {path : 'roomsvisibility', component: Roomsvisibility},
     { path : 'make-reservation', component: MakeReservation},
+    {path : 'utility_prices', component: Utilities},
 ];
