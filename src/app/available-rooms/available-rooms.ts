@@ -1,12 +1,12 @@
 import {Component, signal, Signal} from '@angular/core';
 import {Room} from '../room';
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 import {CurrencyPipe} from '@angular/common';
 
 @Component({
   selector: 'app-available-rooms',
   imports: [
-    RouterLink,
+  
     CurrencyPipe,
   ],
   templateUrl: './available-rooms.html',

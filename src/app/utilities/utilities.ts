@@ -1,11 +1,11 @@
 import {Component, signal, WritableSignal} from '@angular/core';
 import {UtilityRequest, UtilityService} from '../services/utilities/utility-service';
 import {CurrencyPipe} from '@angular/common';
-import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-utilities',
-  imports: [CurrencyPipe, RouterLink],
+  imports: [CurrencyPipe],
   templateUrl: './utilities.html',
   styleUrl: './utilities.css',
 })
