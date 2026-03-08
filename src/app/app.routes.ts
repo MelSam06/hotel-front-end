@@ -15,7 +15,7 @@ export const routes: Routes = [
     { path: 'available-rooms', component: AvailableRooms},
     { path: 'login', component: Login},
     { path : 'registration', component: Registration},
-    {path : 'roomsvisibility', component: Roomsvisibility},
+    { path : 'roomsvisibility', component: Roomsvisibility},
     { path : 'make-reservation', component: MakeReservation},
-    {path : 'utility_prices', component: Utilities},
+    { path : 'utility_prices', component: Utilities},
 ];
