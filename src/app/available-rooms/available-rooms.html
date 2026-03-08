@@ -9,7 +9,7 @@
     @for(r of availableRooms(); track r.roomNumber) {
       <tr>
         <td>{{r.roomNumber}}</td>
-        <td>{{r.pricePerNight}}</td>
+        <td>{{ r.pricePerNight | currency:'EUR':'symbol':'1.2-2' }}</td>
         <td>
           <div class="image-container">
             <img [src]="r.image" alt="Immagine stanza"/>
