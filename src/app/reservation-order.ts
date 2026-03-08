@@ -1,6 +1,6 @@
 export interface ReservationOrder {
-  id: number;
-  customerId: number;
-  paymentId: number;
+  resOrderId: number | null;
+  customerId: number | undefined;
+  paymentId: number | undefined | null;
   orderDate: string;
 }

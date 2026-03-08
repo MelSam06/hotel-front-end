@@ -1,1 +1,8 @@
+How would you like to pay?<br/>
+<select [(ngModel)]="paymentMethod" name="paymentMethod"><br/><br/>
+  <option value="" disabled selected>- Select a payment method -</option>
+  <option value="creditCard">Credit Card</option>
+  <option value="payPal">Pay Pal</option>
+  <option value="bankTransfer">Bank transfer</option>
+</select><br/><br/>
 <button (click)="makeReservation()">Conferma prenotazione</button>

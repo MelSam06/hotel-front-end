@@ -1,6 +1,6 @@
 export interface Payment {
-  id: number;
+  paymentId: number | null;
   amount: number;
   paymentMethod: string;
-  customerId: number;
+  customerId: number | undefined;
 }

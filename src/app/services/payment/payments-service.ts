@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {ReservationOrder} from '../../reservation-order';
 import {Payment} from '../../payment';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class PaymentsService {
 
   constructor(private http: HttpClient) { }
 
-  create(payment: Payment) {
-    return this.http.post(this.apiUrl, payment);
+  create(payment: Payment): Observable<Payment> {
+    return this.http.post<Payment>(this.apiUrl, payment);
   }
 }
