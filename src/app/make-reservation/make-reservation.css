@@ -17,6 +17,31 @@
   letter-spacing: 0.02em;
 }
 
+.payment-section h3 {
+  background-color: #f7f4ee;
+  border: 1.5px solid #e0d9c8;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+
+.payment-section h3 p {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.95rem;
+  color: #4a4336;
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+}
+
+.payment-section h3 p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-section h3 p strong {
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
 .payment-field {
   display: flex;
   flex-direction: column;

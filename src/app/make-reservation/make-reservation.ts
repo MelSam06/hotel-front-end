@@ -10,7 +10,6 @@ import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ReservationOrder} from '../reservation-order';
 import {PaymentsService} from '../services/payment/payments-service';
-import {Observable} from 'rxjs';
 import {ReservationOrdersService} from '../services/reservation-order/reservation-orders-service';
 
 @Component({
@@ -28,6 +27,7 @@ export class MakeReservation {
   reservationState!: ReservationState | null;
   paymentMethod: string = '';
   customer: Customer | null = null;
+  capacity: number | undefined = 0;
   reservation: Reservation = {
     resId: null,
     resOrderId: 0,
@@ -55,6 +55,7 @@ export class MakeReservation {
     if(this.reservationState) {
       this.reservation.checkInDate = this.reservationState.checkInDate ?? '';
       this.reservation.checkOutDate = this.reservationState.checkOutDate ?? '';
+      this.capacity = this.reservationState.capacity;
       let checkInDateDate = new Date(this.reservation.checkInDate);
       let checkOutDateDate = new Date(this.reservation.checkOutDate);
       this.reservation.price =  (this.diffInDays(checkOutDateDate, checkInDateDate)
@@ -63,7 +64,6 @@ export class MakeReservation {
     this.reservation.roomNumber = this.room.roomNumber;
     this.loginService.customerObservable.subscribe(customer => {
       this.customer = customer;
-      console.log(this.customer);
     });
     this.payment.amount = this.reservation.price;
     this.payment.customerId = this.customer?.custId;
@@ -77,6 +77,11 @@ export class MakeReservation {
     if (this.customer == null) {
       alert("You must be logged in!");
       this.router.navigate(['login']);
+      return;
+    }
+    if(this.reservationState == null || this.room == null) {
+      alert("Missing reservation data");
+      this.router.navigate(['reserve-room']);
       return;
     }
     if (this.paymentMethod == '') {
