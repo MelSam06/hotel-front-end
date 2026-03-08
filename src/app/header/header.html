@@ -5,7 +5,12 @@
     <button class="btn-primary" routerLink="/reserve-room">Book Now</button>
   </div>
   <div class="login-buttons">
-    <button class="btn-primary" routerLink="/registration">Register</button>
-    <button class="btn-primary" routerLink="/login">Log in</button>
+    @if (customer$ | async; as customer) {
+      <div class="user-badge">{{ customer.firstName }} {{ customer.lastName }}</div>
+      <button class="btn-primary" (click)="logout()">Log out</button>
+    } @else {
+      <button class="btn-primary" routerLink="/registration">Register</button>
+      <button class="btn-primary" routerLink="/login">Log in</button>
+    }
   </div>
 </header>
