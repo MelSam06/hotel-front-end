@@ -1,75 +1,75 @@
-.griglia_top {
+/* Container principale della griglia */
+.griglia {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfbf7; /* Un color pergamena molto chiaro */
+  border: 1px solid #d4af37; /* Bordo oro sottile */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-family: 'Crimson Text', serif; /* Un font serif classico ed elegante */
 }
-.griglia_utilities {
+
+/* Singola riga del servizio */
+.utility_row {
   display: grid;
-  /* Crea 3 colonne di uguale larghezza */
-  grid-template-columns: repeat(3, 1fr);
-  /* Spazio di 15px tra le celle */
-  gap: 15px;
-}
-
-.utility_row{
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: 180px 1fr 120px; /* Distribuzione colonne */
   align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #e0d5c1; /* Linea di separazione color sabbia */
+  transition: all 0.3s ease;
 }
 
-.name_and_photo{
-  flex: 1;
+/* Effetto al passaggio del mouse (Hover) */
+.utility_row:hover {
+  background-color: #f5f0e6;
+  transform: scale(1.01);
+  cursor: default;
 }
 
-.description{
-  flex: 2;
+/* Rimuove il bordo dall'ultima riga */
+.utility_row:last-child {
+  border-bottom: none;
 }
 
-.price{
-  flex: 1;
+/* Nome del servizio */
+.name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #6a4e25; /* Marrone scuro caldo */
+  text-transform: capitalize;
+}
+
+/* Descrizione del servizio */
+.description {
+  font-size: 0.95rem;
+  color: #6d6d6d;
+  line-height: 1.5;
+  padding: 0 20px;
+  font-style: italic; /* Un tocco di classe "antico" */
+}
+
+/* Prezzo */
+.price {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #8b0000; /* Rosso bordeaux come i Grifondoro */
   text-align: right;
+  font-family: 'Garamond', serif;
 }
-/*<div class="utility_row">*/
-/*<div class="name_and_photo" style="flex: 1;">{{u.utilityName}}</div>*/
-/*<div class="description" style="flex: 2;">{{u.utilityDescription}}</div>*/
-/*<div class="price" style="flex: 1; text-align: right;">{{u.price}}</div>*/
 
-/*.griglia {*/
-/*  margin-top: 10px;*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  gap: 5rem; !* più distanza tra le immagini *!*/
-/*}*/
-/*.utility_row {*/
-/*  margin-bottom: 10px; !*spazio tra le div*!*/
-/*  flex: 0 0 550px;  !* larghezza della card *!*/
-/*  height: 110px;    !* altezza leggermente più bassa *!*/
-/*  border-radius: 16px;*/
-/*  overflow: hidden;*/
-/*  position: relative;*/
-/*  box-shadow: 0 4px 10px rgba(0,0,0,0.06);*/
-/*  transition: 0.25s ease;*/
-/*  background-size: cover;*/
-/*  background-position: center;*/
-/*}*/
-/*.colonna_descrizioni{*/
-/*  flex: 0 0 700px;*/
-/*}*/
-
-
-/*<div class="images">*/
-/*<div class="img img1">*/
-/*<div class="overlay">*/
-/*<p>location, surrounded by nature and carefully maintained in every detail, will make you feel even more immersed in the magical atmosphere of the wizarding academy.</p> </div>*/
-/*</div>*/
-/*<div class="img img2">*/
-/*<div class="overlay"></div>*/
-/*<p></p>*/
-/*</div>*/
-/*<div class="img img3">*/
-/*<div class="overlay">Fine Dining</div>*/
-/*</div>*/
-/*</div>*/
-
-/*.img1 {*/
-/*  background-image: url("https://i.pinimg.com/736x/17/3d/9e/173d9e13a6d82786613f5502c3345c9e.jpg");*/
-/*}*/
+/* Responsive per schermi piccoli (Mobile) */
+@media (max-width: 768px) {
+  .utility_row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .description {
+    padding: 0;
+  }
+  .price {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
