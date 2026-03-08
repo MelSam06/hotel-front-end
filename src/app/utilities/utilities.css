@@ -16,7 +16,7 @@
   padding: 10px;
 }
 
-.name_and_photo{
+.name{
   flex: 1;
 }
 
@@ -28,48 +28,3 @@
   flex: 1;
   text-align: right;
 }
-/*<div class="utility_row">*/
-/*<div class="name_and_photo" style="flex: 1;">{{u.utilityName}}</div>*/
-/*<div class="description" style="flex: 2;">{{u.utilityDescription}}</div>*/
-/*<div class="price" style="flex: 1; text-align: right;">{{u.price}}</div>*/
-
-/*.griglia {*/
-/*  margin-top: 10px;*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  gap: 5rem; !* più distanza tra le immagini *!*/
-/*}*/
-/*.utility_row {*/
-/*  margin-bottom: 10px; !*spazio tra le div*!*/
-/*  flex: 0 0 550px;  !* larghezza della card *!*/
-/*  height: 110px;    !* altezza leggermente più bassa *!*/
-/*  border-radius: 16px;*/
-/*  overflow: hidden;*/
-/*  position: relative;*/
-/*  box-shadow: 0 4px 10px rgba(0,0,0,0.06);*/
-/*  transition: 0.25s ease;*/
-/*  background-size: cover;*/
-/*  background-position: center;*/
-/*}*/
-/*.colonna_descrizioni{*/
-/*  flex: 0 0 700px;*/
-/*}*/
-
-
-/*<div class="images">*/
-/*<div class="img img1">*/
-/*<div class="overlay">*/
-/*<p>location, surrounded by nature and carefully maintained in every detail, will make you feel even more immersed in the magical atmosphere of the wizarding academy.</p> </div>*/
-/*</div>*/
-/*<div class="img img2">*/
-/*<div class="overlay"></div>*/
-/*<p></p>*/
-/*</div>*/
-/*<div class="img img3">*/
-/*<div class="overlay">Fine Dining</div>*/
-/*</div>*/
-/*</div>*/
-
-/*.img1 {*/
-/*  background-image: url("https://i.pinimg.com/736x/17/3d/9e/173d9e13a6d82786613f5502c3345c9e.jpg");*/
-/*}*/

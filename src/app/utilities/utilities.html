@@ -29,7 +29,7 @@
   <div class="griglia">
     @for (u of list(); track u.utilityId) {
       <div class="utility_row">
-        <div class="name_and_photo">{{u.utilityName}}</div>
+        <div class="name">{{u.utilityName}}</div>
         <div class="description">{{u.utilityDescription}}</div>
         <div class="price">{{ u.price | currency:'EUR':'symbol':'1.2-2' }}</div>
       </div>
