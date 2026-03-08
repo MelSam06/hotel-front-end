@@ -7,6 +7,7 @@ import {Registration} from './registration/registration';
 import { Roomsvisibility } from './roomsvisibility/roomsvisibility';
 import {MakeReservation} from './make-reservation/make-reservation';
 import { Utilities } from './utilities/utilities';
+import {CustomerReservations} from './customer-reservations/customer-reservations';
 
 export const routes: Routes = [
     { path : '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,4 +19,5 @@ export const routes: Routes = [
     { path : 'roomsvisibility', component: Roomsvisibility},
     { path : 'make-reservation', component: MakeReservation},
     { path : 'utility_prices', component: Utilities},
+    { path : 'customer-reservations', component: CustomerReservations},
 ];

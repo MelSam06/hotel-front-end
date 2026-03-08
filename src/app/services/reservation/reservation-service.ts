@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Reservation} from '../../reservation';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {ReservationState} from '../../reservationState';
+import {Customer} from '../../customer';
 
 @Injectable({
   providedIn: 'root',
@@ -30,5 +31,9 @@ export class ReservationService {
 
   makeReservation(reservation: Reservation): Observable<Reservation> {
     return this.http.post<Reservation>(this.apiUrl, reservation);
+  }
+
+  getByCustomerEmail(email: string): Observable<Reservation[]> {
+    return this.http.get<Reservation[]>(`${this.apiUrl}?email=${email}`);
   }
 }

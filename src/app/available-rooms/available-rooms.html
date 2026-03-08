@@ -2,7 +2,7 @@
  <table>
   <thead>
     <tr>
-      <th>Room number</th><th>Price per night</th>
+      <th>Room number</th><th>Price per night</th><th>Details</th>
     </tr>
   </thead>
   <tbody>
@@ -10,6 +10,7 @@
       <tr>
         <td>{{r.roomNumber}}</td>
         <td>{{ r.pricePerNight | currency:'EUR':'symbol':'1.2-2' }}</td>
+        <td>{{r.description}}</td>
         <td>
           <div class="image-container">
             <img [src]="r.image" alt="Immagine stanza"/>

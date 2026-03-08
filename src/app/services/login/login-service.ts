@@ -38,7 +38,11 @@ export class LoginService {
     this.customerSubject.next(null);
   }
 
-  private loadCustomerFromStorage(): Customer | null {
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token');
+  }
+
+  public loadCustomerFromStorage(): Customer | null {
     const stored = localStorage.getItem('customer');
     return stored ? JSON.parse(stored) : null;
   }

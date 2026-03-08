@@ -1,0 +1,94 @@
+.reservations-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 48px 52px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.reservations-section h2 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  margin-bottom: 36px;
+}
+
+.reservations-table thead tr {
+  background: #c8a96a;
+}
+
+.reservations-table thead th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.reservations-table thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.reservations-table thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.reservations-table tbody tr {
+  border-bottom: 1px solid #e8e2d6;
+  transition: background-color 0.18s ease;
+}
+
+.reservations-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.reservations-table tbody tr:hover {
+  background-color: #f7f4ee;
+}
+
+.reservations-table tbody td {
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  color: #4a4336;
+}
+
+.btn-home {
+  display: block;
+  width: 100%;
+  padding: 14px 36px;
+  background: #c8a96a;
+  color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(184, 169, 106, 0.35);
+}
+
+.btn-home:hover {
+  background: #b89652;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(184, 169, 106, 0.45);
+}
+
+.btn-home:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(184, 169, 106, 0.3);
+}

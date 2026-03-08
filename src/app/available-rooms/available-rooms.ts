@@ -6,7 +6,7 @@ import {CurrencyPipe} from '@angular/common';
 @Component({
   selector: 'app-available-rooms',
   imports: [
-  
+
     CurrencyPipe,
   ],
   templateUrl: './available-rooms.html',
@@ -14,7 +14,6 @@ import {CurrencyPipe} from '@angular/common';
 })
 export class AvailableRooms {
   availableRooms!: Signal<Room[]>;
-  reservationData!: Signal<any>;
   constructor(private router: Router) {}
   ngOnInit() {
     this.availableRooms = signal(history.state.availableRooms);

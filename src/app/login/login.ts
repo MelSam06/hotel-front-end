@@ -24,7 +24,6 @@ export class Login {
     }
     this.loginService.login(user).subscribe({
         next: () => {
-          alert("Login effettuato!");
           this.router.navigate(['/home']);
         },
         error: (err) => {

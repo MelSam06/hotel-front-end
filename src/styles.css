@@ -124,7 +124,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  
+
 }
 
 /* Intro */
@@ -270,7 +270,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -285,7 +285,7 @@ body {
   text-align: center;
 }
 .card1 p{
- color: #333; 
+ color: #333;
 }
 
 .card2 {
@@ -294,7 +294,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
- 
+
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -313,7 +313,7 @@ body {
     background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -502,7 +502,7 @@ body {
 /* ===== available rooms ===== */
 
 .availableRooms{
-  max-width: 700px;
+  max-width: 1000px;
   margin: 2rem auto;
   background: white;
   padding: 1.5rem;

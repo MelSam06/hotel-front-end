@@ -96,11 +96,11 @@ export class MakeReservation {
             next: created => {
               this.reservation.resOrderId = created.resOrderId;
               this.reservationService.makeReservation(this.reservation).subscribe({
-                next: created => {
-                  console.log(created);
+                next: () => {
+                  alert("Reservation made!");
+                  this.router.navigate(['customer-reservations']);
                 }
               });
-              alert("Reservation made!");
             }
           });
         }

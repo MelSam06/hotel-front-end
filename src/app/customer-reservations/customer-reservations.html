@@ -1,0 +1,24 @@
+<div class="reservations-section">
+  <h2>Your Reservations</h2>
+
+  <table class="reservations-table">
+    <thead>
+    <tr>
+      <th>Check In Date</th>
+      <th>Check Out Date</th>
+      <th>Room Number</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for(r of reservations(); track r.resId) {
+        <tr>
+          <td>{{r.checkInDate}}</td>
+          <td>{{r.checkOutDate}}</td>
+          <td>{{r.roomNumber}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <button class="btn-home" routerLink="/home">Back to Home</button>
+</div>
