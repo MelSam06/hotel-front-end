@@ -1,6 +1,6 @@
 import {Component, HostListener, signal} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
-import {AsyncPipe, NgIf} from '@angular/common';
+import {AsyncPipe} from '@angular/common';
 import {LoginService} from '../services/login/login-service';
 import {Customer} from '../customer';
 import {Observable} from 'rxjs';
@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
   selector: 'app-header',
   imports: [
     RouterLink,
-    NgIf,
+    
     AsyncPipe
   ],
   templateUrl: './header.html',
