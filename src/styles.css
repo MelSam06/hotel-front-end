@@ -161,7 +161,7 @@ body {
 .img {
   
   flex: 0 0 520px;  /* larghezza della card */
-  height: 260px;    /* altezza leggermente più bassa */
+  height: 320px;    /* altezza leggermente più bassa */
 
   border-radius: 16px;
   overflow: hidden;
