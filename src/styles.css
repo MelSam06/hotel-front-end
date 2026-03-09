@@ -192,7 +192,7 @@ body {
   background-image: url("https://i.pinimg.com/736x/b3/97/fa/b397fa6924c5a9378d97324a3d3647b2.jpg");
 }
 .img3 h2{
-  margin-top: 5px;;
+  margin-top:5px;;
 }
 
 /* testo nascosto */
@@ -257,75 +257,75 @@ body {
 
 
 /* Feature cards */
-.features {
-  padding:40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
+/*.features {*/
+/*  padding:40px;*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
+/*  gap: 1.5rem;*/
+/*}*/
 
 
-.card1 {
-  background-image: url(https://i.pinimg.com/avif/1200x/cd/33/a9/cd33a99f78e13c463498b3f7674536a0.avf);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/*.card1 {*/
+/*  background-image: url(https://i.pinimg.com/avif/1200x/cd/33/a9/cd33a99f78e13c463498b3f7674536a0.avf);*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
 
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: 0.25s ease;
-}
+/*  padding: 1.5rem;*/
+/*  border-radius: 16px;*/
+/*  box-shadow: 0 8px 24px rgba(0,0,0,0.06);*/
+/*  transition: 0.25s ease;*/
+/*}*/
 
-.card1:hover {
-  transform: translateY(-5px);
-}
-.card1 h3{
-  color: #333;
-  text-align: center;
-}
-.card1 p{
- color: #333;
-}
+/*.card1:hover {*/
+/*  transform: translateY(-5px);*/
+/*}*/
+/*.card1 h3{*/
+/*  color: #333;*/
+/*  text-align: center;*/
+/*}*/
+/*.card1 p{*/
+/* color: #333;*/
+/*}*/
 
-.card2 {
-  background-image: url(https://www.shutterstock.com/shutterstock/videos/1008683587/thumb/1.jpg?ip=x480);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/*.card2 {*/
+/*  background-image: url(https://www.shutterstock.com/shutterstock/videos/1008683587/thumb/1.jpg?ip=x480);*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
 
 
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: 0.25s ease;
-}
+/*  padding: 1.5rem;*/
+/*  border-radius: 16px;*/
+/*  box-shadow: 0 8px 24px rgba(0,0,0,0.06);*/
+/*  transition: 0.25s ease;*/
+/*}*/
 
-.card2:hover {
-  transform: translateY(-5px);
-}
-.card2 h3{
-  color:  #333;
-  text-align: center;
-}
-.card3 {
-  background-image: url(https://cdn.thefork.com/tf-lab/image/upload/restaurant/5470fdba-3e09-41fa-80f0-e58eca61fbf0/b0965a77-ce81-48e6-aa43-3ce0e81f656f.jpg);
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/*.card2:hover {*/
+/*  transform: translateY(-5px);*/
+/*}*/
+/*.card2 h3{*/
+/*  color:  #333;*/
+/*  text-align: center;*/
+/*}*/
+/*.card3 {*/
+/*  background-image: url(https://cdn.thefork.com/tf-lab/image/upload/restaurant/5470fdba-3e09-41fa-80f0-e58eca61fbf0/b0965a77-ce81-48e6-aa43-3ce0e81f656f.jpg);*/
+/*    background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
 
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: 0.25s ease;
-}
-.card3:hover {
-  transform: translateY(-5px);
-}
-.card3 h3{
-  color:  #333;
-  text-align: center;
-}
+/*  padding: 1.5rem;*/
+/*  border-radius: 16px;*/
+/*  box-shadow: 0 8px 24px rgba(0,0,0,0.06);*/
+/*  transition: 0.25s ease;*/
+/*}*/
+/*.card3:hover {*/
+/*  transform: translateY(-5px);*/
+/*}*/
+/*.card3 h3{*/
+/*  color:  #333;*/
+/*  text-align: center;*/
+/*}*/
 
 /* ===== Footer ===== */
 /*.socialmedia{
@@ -502,7 +502,7 @@ body {
 /* ===== available rooms ===== */
 
 .availableRooms{
-  max-width: 1000px;
+  max-width: 700px;
   margin: 2rem auto;
   background: white;
   padding: 1.5rem;

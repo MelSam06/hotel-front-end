@@ -1,0 +1,99 @@
+.carousel-section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-main-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Larghezza della singola card visibile */
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Forza l'aggancio della card */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Nasconde scrollbar */
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-card {
+  min-width: 100%; /* Ogni card occupa il 100% del contenitore */
+  height: 400px;
+  scroll-snap-align: start; /* Allinea la card all'inizio della finestra */
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay per il testo */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  font-family: 'Inter', sans-serif;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c8a96a; /* Oro */
+  text-shadow: rgba(27, 27, 27, 0.45) 1px 1px 1px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Pulsanti Navigazione */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(200, 169, 106); /* Bordeaux Grifondoro semi-trasparente */
+  color: #ffffff;
+  border: 2px #c8a96a;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgb(184, 150, 82);
+  box-shadow: 0 0 15px #c8a96a;
+}
+
+.prev { left: -25px; } /* Esce leggermente fuori a sinistra */
+.next { right: -25px; } /* Esce leggermente fuori a destra */
+
+/* Immagini (Sostituisci con i tuoi path reali) */
+.card1 { background-image: url(https://i.pinimg.com/avif/1200x/cd/33/a9/cd33a99f78e13c463498b3f7674536a0.avf); }
+.card2 { background-image: url(https://www.shutterstock.com/shutterstock/videos/1008683587/thumb/1.jpg?ip=x480); }
+.card3 { background-image: url(https://cdn.thefork.com/tf-lab/image/upload/restaurant/5470fdba-3e09-41fa-80f0-e58eca61fbf0/b0965a77-ce81-48e6-aa43-3ce0e81f656f.jpg); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-main-container {
+    max-width: 90%;
+  }
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .prev { left: 5px; }
+  .next { right: 5px; }
+}
