@@ -17,7 +17,82 @@
   letter-spacing: 0.02em;
 }
 
-.payment-section h3 {
+/* ── Services ── */
+.add-services {
+  margin-bottom: 28px;
+}
+
+.services-title {
+  display: block;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 14px;
+}
+
+.service-item {
+  border-bottom: 1px solid #ede8dc;
+  padding: 10px 0;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+.service-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.95rem;
+  color: #4a4336;
+}
+
+.service-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 1.5px solid #d0c9b8;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.service-checkbox:checked {
+  background-color: #c8a96a;
+  border-color: #c8a96a;
+}
+
+.service-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.service-name {
+  flex: 1;
+}
+
+.service-price {
+  font-weight: 600;
+  color: #c8a96a;
+}
+
+/* ── Booking summary ── */
+.booking-summary {
   background-color: #f7f4ee;
   border: 1.5px solid #e0d9c8;
   border-radius: 12px;
@@ -25,7 +100,17 @@
   margin-bottom: 28px;
 }
 
-.payment-section h3 p {
+.summary-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #c8a96a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 14px 0;
+}
+
+.booking-summary p {
   font-family: 'Georgia', 'Times New Roman', serif;
   font-size: 0.95rem;
   color: #4a4336;
@@ -33,15 +118,45 @@
   line-height: 1.6;
 }
 
-.payment-section h3 p:last-child {
+.booking-summary p:last-child {
   margin-bottom: 0;
 }
 
-.payment-section h3 p strong {
-  color: #2a2a2a;
+.booking-summary p span,
+.booking-summary .summary-utilities span {
   font-weight: 600;
+  color: #2a2a2a;
 }
 
+.summary-utilities {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.95rem;
+  color: #4a4336;
+  margin-bottom: 8px;
+}
+
+.summary-utilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+}
+
+.summary-utilities ul li::before {
+  content: '✦';
+  color: #c8a96a;
+  font-size: 0.6rem;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.summary-total {
+  margin-top: 12px !important;
+  padding-top: 12px;
+  border-top: 1px solid #e0d9c8;
+  font-size: 1rem !important;
+}
+
+/* ── Payment field ── */
 .payment-field {
   display: flex;
   flex-direction: column;
@@ -67,7 +182,7 @@
   border-radius: 10px;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23b8a96a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c8a96a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   cursor: pointer;
@@ -76,19 +191,20 @@
 
 .payment-field select:focus {
   outline: none;
-  border-color: #b8a96a;
-  box-shadow: 0 0 0 3px rgba(184, 169, 106, 0.15);
+  border-color: #c8a96a;
+  box-shadow: 0 0 0 3px rgba(200, 169, 106, 0.15);
 }
 
 .payment-field select:hover {
-  border-color: #b8a96a;
+  border-color: #c8a96a;
 }
 
+/* ── Confirm button ── */
 .btn-confirm {
   display: block;
   width: 100%;
   padding: 14px 36px;
-  background: #c8a96a;
+  background-color: #c8a96a;
   color: #ffffff;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-size: 1rem;
@@ -98,17 +214,16 @@
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(184, 169, 106, 0.35);
-  margin-top: 8px;
+  box-shadow: 0 4px 14px rgba(200, 169, 106, 0.35);
 }
 
 .btn-confirm:hover {
-  background: #b89652;
+  background-color: #b3944d;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(184, 169, 106, 0.45);
+  box-shadow: 0 6px 20px rgba(200, 169, 106, 0.45);
 }
 
 .btn-confirm:active {
   transform: translateY(0);
-  box-shadow: 0 3px 10px rgba(184, 169, 106, 0.3);
+  box-shadow: 0 3px 10px rgba(200, 169, 106, 0.3);
 }
