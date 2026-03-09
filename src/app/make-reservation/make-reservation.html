@@ -1,20 +1,39 @@
 <div class="payment-section">
   <h2>Complete your booking</h2>
-  <h3>
-    <p>RESERVATION RECAP</p>
-    <p>
-      Check in: {{reservation.checkInDate}}
-    </p>
-    <p>
-      Check out: {{reservation.checkOutDate}}
-    </p>
-    <p>
-      Guests: {{capacity}}
-    </p>
-    <p>
-      Total price: {{reservation.price}}£
-    </p>
-  </h3>
+
+  <div class="add-services">
+    <label class="services-title">Would you like to add any services?</label>
+    @for (cl of checkList(); track cl.utility.utilityId) {
+      <div class="service-item">
+        <label class="service-label">
+          <input type="checkbox" class="service-checkbox"
+                 [(ngModel)]="cl.checked"
+                 (ngModelChange)="onItemChange(cl)">
+          <span class="service-name">{{cl.utility.utilityName}}</span>
+          <span class="service-price">{{cl.utility.price}} €</span>
+        </label>
+      </div>
+    }
+  </div>
+
+  <div class="booking-summary">
+    <p class="summary-title">Reservation Recap</p>
+    <p><span>Check in:</span> {{reservation.checkInDate}}</p>
+    <p><span>Check out:</span> {{reservation.checkOutDate}}</p>
+    <p><span>Guests:</span> {{capacity}}</p>
+    @if(!reservationUtilitiesSignal() === undefined || reservationUtilitiesSignal().length > 0) {
+      <div class="summary-utilities">
+        <span>Utilities:</span>
+        <ul>
+          @for(u of reservationUtilitiesSignal(); track u.utilityId) {
+            <li>{{u.utilityName}}</li>
+          }
+        </ul>
+      </div>
+    }
+    <p class="summary-total"><span>Total price:</span> {{reservation.price}} €</p>
+  </div>
+
   <div class="payment-field">
     <label for="paymentMethod">How would you like to pay?</label>
     <select [(ngModel)]="paymentMethod" name="paymentMethod" id="paymentMethod">
