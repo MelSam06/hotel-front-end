@@ -46,7 +46,7 @@ body {
 }
 
 .hero p {
-  margin-bottom: 1.5rem;
+  margin-bottom: rem;
   font-weight: 300;
   letter-spacing: 2px;
 }
@@ -71,7 +71,8 @@ body {
 
 /* ===== Button ===== */
 .btn-primary {
-  padding: 0.8rem 1.6rem;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
   border: none;
   background: #c8a96a;
   color: white;
@@ -85,6 +86,13 @@ body {
   background: #b89652;
   transform: translateY(-2px);
 }
+.hero-content button{
+  padding: 1rem 5rem;
+   color: white;
+  font-size: 20px;
+  border-radius: 999px;
+}
+
 
 /* ===== Navbar ===== */
 .navbar {
@@ -153,18 +161,22 @@ body {
 
 
 .intro h2 {
+  
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-size: 50px;
   color: #333;
 
   text-align: center;
 
   margin-bottom: 3rem;
   letter-spacing: 1px;
+  color:  #b57a3f;
 }
 .intro p{
-   margin-bottom: 50px;
+ text-align: center;
+   margin-bottom: 1.5rem;
   font-weight: 300;
+  font-size: large;
   letter-spacing: 2px;
  }
 
@@ -253,8 +265,8 @@ body {
 /* secondo titolo  */
 .second-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-  color: #333;
+  font-size: 40px;
+  color: #b57a3f;
 
   text-align: center;
 

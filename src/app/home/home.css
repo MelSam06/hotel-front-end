@@ -76,9 +76,28 @@
   background: rgb(184, 150, 82);
   box-shadow: 0 0 15px #c8a96a;
 }
+.prev{
+  left: -25px;
+  }
+  .next{
+    right: -25px;
+  }
+.div-par {
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 20px;
+  max-width: 1500px;   
+  margin: 0 auto;      
+  padding: 20px;
+}
 
-.prev { left: -25px; } /* Esce leggermente fuori a sinistra */
-.next { right: -25px; } /* Esce leggermente fuori a destra */
+.second-paragraf{
+  letter-spacing: 1px;
+  font-size: 18px;
+   max-width: 1500px;   /* più grande della precedente */
+  margin: 0 auto;     /* centra la div nella pagina */
+  padding: 4px;
+}
 
 /* Immagini (Sostituisci con i tuoi path reali) */
 .card1 { background-image: url(https://i.pinimg.com/avif/1200x/cd/33/a9/cd33a99f78e13c463498b3f7674536a0.avf); }
