@@ -177,15 +177,19 @@ body {
 }
 
 .img {
-  flex: 0 0 420px;  /* larghezza della card */
-  height: 220px;    /* altezza leggermente più bassa */
+  
+  flex: 0 0 520px;  /* larghezza della card */
+  height: 320px;    /* altezza leggermente più bassa */
 
   border-radius: 16px;
   overflow: hidden;
 
   position: relative;
 
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  box-shadow: 
+  0 10px 25px rgba(0,0,0,0.12),
+  0 20px 60px rgba(0,0,0,0.08);
+
   transition: 0.25s ease;
 
   background-size: cover;
@@ -199,6 +203,9 @@ body {
 .img1 {
   background-image: url("https://i.pinimg.com/736x/17/3d/9e/173d9e13a6d82786613f5502c3345c9e.jpg");
 }
+.img1 p{
+   margin-top: 3rem;
+}
 
 .img2 {
   background-image: url("https://i.pinimg.com/avif/1200x/42/f4/e9/42f4e9a93075e5ee5fa157994199927c.avf");
@@ -208,6 +215,9 @@ body {
 }
 .img3 {
   background-image: url("https://i.pinimg.com/736x/b3/97/fa/b397fa6924c5a9378d97324a3d3647b2.jpg");
+}
+.img3 p{
+   margin-top: 3rem;
 }
 .img3 h2{
   margin-top:5px;;
@@ -502,8 +512,8 @@ body {
   margin-top: 1rem;
   padding: 0.7rem;
   border: none;
-  border-radius: 8px;
-  background: #c89b3c;
+  border-radius: 999px;
+  background: #c8a96a;
   color: white;
   font-size: 0.95rem;
   font-weight: 500;
