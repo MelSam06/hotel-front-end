@@ -1,0 +1,29 @@
+<div class="payment-section">
+  <h2>Complete your booking</h2>
+  <h3>
+    <p>RESERVATION RECAP</p>
+    <p>
+      Check in: {{reservation.checkInDate}}
+    </p>
+    <p>
+      Check out: {{reservation.checkOutDate}}
+    </p>
+    <p>
+      Guests: {{capacity}}
+    </p>
+    <p>
+      Total price: {{reservation.price}}£
+    </p>
+  </h3>
+  <div class="payment-field">
+    <label for="paymentMethod">How would you like to pay?</label>
+    <select [(ngModel)]="paymentMethod" name="paymentMethod" id="paymentMethod">
+      <option value="" disabled selected>- Select a payment method -</option>
+      <option value="creditCard">Credit Card</option>
+      <option value="payPal">PayPal</option>
+      <option value="bankTransfer">Bank Transfer</option>
+    </select>
+  </div>
+
+  <button class="btn-confirm" (click)="makeReservation()">Confirm booking</button>
+</div>

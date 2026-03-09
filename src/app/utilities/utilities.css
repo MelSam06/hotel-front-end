@@ -1,0 +1,75 @@
+/* Container principale della griglia */
+.griglia {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfbf7; /* Un color pergamena molto chiaro */
+  border: 1px solid #d4af37; /* Bordo oro sottile */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-family: 'Crimson Text', serif; /* Un font serif classico ed elegante */
+}
+
+/* Singola riga del servizio */
+.utility_row {
+  display: grid;
+  grid-template-columns: 180px 1fr 120px; /* Distribuzione colonne */
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid #e0d5c1; /* Linea di separazione color sabbia */
+  transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse (Hover) */
+.utility_row:hover {
+  background-color: #f5f0e6;
+  transform: scale(1.01);
+  cursor: default;
+}
+
+/* Rimuove il bordo dall'ultima riga */
+.utility_row:last-child {
+  border-bottom: none;
+}
+
+/* Nome del servizio */
+.name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #6a4e25; /* Marrone scuro caldo */
+  text-transform: capitalize;
+}
+
+/* Descrizione del servizio */
+.description {
+  font-size: 0.95rem;
+  color: #6d6d6d;
+  line-height: 1.5;
+  padding: 0 20px;
+  font-style: italic; /* Un tocco di classe "antico" */
+}
+
+/* Prezzo */
+.price {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #8b0000; /* Rosso bordeaux come i Grifondoro */
+  text-align: right;
+  font-family: 'Garamond', serif;
+}
+
+/* Responsive per schermi piccoli (Mobile) */
+@media (max-width: 768px) {
+  .utility_row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .description {
+    padding: 0;
+  }
+  .price {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}

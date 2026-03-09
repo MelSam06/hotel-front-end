@@ -5,7 +5,22 @@
     <button class="btn-primary" routerLink="/reserve-room">Book Now</button>
   </div>
   <div class="login-buttons">
-    <button class="btn-primary" routerLink="/registration">Register</button>
-    <button class="btn-primary" routerLink="/login">Log in</button>
+    @if (customer$ | async; as customer) {
+      <div class="dropdown" (click)="$event.stopPropagation()">
+        <div class="user-badge" (click)="toggleDropdown($event)">
+          {{ customer.firstName }} {{ customer.lastName }}
+          <span>▼</span>
+        </div>
+        @if (isDropdownOpen()) {
+          <div class="dropdown-menu">
+            <a routerLink="customer-reservations">My reservations</a>
+            <a class="logout" (click)="logout()">Log out</a>
+          </div>
+        }
+      </div>
+    } @else {
+      <button class="btn-primary" routerLink="/registration">Register</button>
+      <button class="btn-primary" routerLink="/login">Log in</button>
+    }
   </div>
 </header>

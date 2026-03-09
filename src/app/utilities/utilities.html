@@ -1,18 +1,11 @@
-<div>
-  <table>
-    <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Prezzo</th>
-    </tr>
-    </thead>
-    <tbody>
-      @for (u of list; track u.id){
-        <tr>
-          <td>{{u.name}}</td>
-          <td>{{u.price}}</td>
-        </tr>
-      }
-    </tbody>
-  </table>
-</div>
+<section>
+  <div class="griglia">
+    @for (u of list(); track u.utilityId) {
+      <div class="utility_row">
+        <div class="name">{{u.utilityName}}</div>
+        <div class="description">{{u.utilityDescription}}</div>
+        <div class="price">{{ u.price | currency:'EUR':'symbol':'1.2-2' }}</div>
+      </div>
+    }
+  </div>
+</section>

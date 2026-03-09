@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-roomsvisibility',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './roomsvisibility.html',
   styleUrl: './roomsvisibility.css',
 })

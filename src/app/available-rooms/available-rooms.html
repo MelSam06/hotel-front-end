@@ -2,18 +2,22 @@
  <table>
   <thead>
     <tr>
-      <th>Numero stanza</th><th>Prezzo per notte</th>
+      <th>Room number</th><th>Price per night</th><th>Details</th>
     </tr>
   </thead>
   <tbody>
     @for(r of availableRooms(); track r.roomNumber) {
       <tr>
         <td>{{r.roomNumber}}</td>
-        <td>{{r.pricePerNight}}</td>
+        <td>{{ r.pricePerNight | currency:'EUR':'symbol':'1.2-2' }}</td>
+        <td>{{r.description}}</td>
         <td>
           <div class="image-container">
             <img [src]="r.image" alt="Immagine stanza"/>
           </div>
+        </td>
+        <td>
+          <button  class="reserve-button" (click)="goToRoom(r)">Book room</button>
         </td>
       </tr>
     }
