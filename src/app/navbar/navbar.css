@@ -1,0 +1,8 @@
+.active-link {
+    color: #c8a96a !important;
+}
+
+.active-link::after {
+    width: 100% !important;
+    background: #c8a96a !important;
+}
