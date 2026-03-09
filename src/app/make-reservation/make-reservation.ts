@@ -1,4 +1,4 @@
-import {Component, signal, Signal} from '@angular/core';
+import {Component, signal, Signal, WritableSignal} from '@angular/core';
 import {Room} from '../room';
 import {ReservationService} from '../services/reservation/reservation-service';
 import {Reservation} from '../reservation';
@@ -11,6 +11,12 @@ import {Router} from '@angular/router';
 import {ReservationOrder} from '../reservation-order';
 import {PaymentsService} from '../services/payment/payments-service';
 import {ReservationOrdersService} from '../services/reservation-order/reservation-orders-service';
+import {UtilityRequest, UtilityService} from '../services/utilities/utility-service';
+
+interface checkListItem {
+  utility: UtilityRequest;
+  checked: boolean;
+}
 
 @Component({
   selector: 'app-make-reservation',
@@ -28,6 +34,10 @@ export class MakeReservation {
   paymentMethod: string = '';
   customer: Customer | null = null;
   capacity: number | undefined = 0;
+  utilities: WritableSignal<UtilityRequest[]> = signal([]);
+  checkList: WritableSignal<checkListItem[]> = signal([]);
+  reservationUtilities: UtilityRequest[] = [];
+  reservationUtilitiesSignal: WritableSignal<UtilityRequest[]> = signal(this.reservationUtilities);
   reservation: Reservation = {
     resId: null,
     resOrderId: 0,
@@ -68,10 +78,23 @@ export class MakeReservation {
     this.payment.amount = this.reservation.price;
     this.payment.customerId = this.customer?.custId;
     this.reservationOrder.customerId = this.customer?.custId;
+    this.utilityService.findAll().subscribe(utilities => {
+      this.utilities.set(utilities);
+      let array: checkListItem[] = [];
+      for (let u of utilities) {
+        let item: checkListItem = {
+          utility: u,
+          checked: false
+        };
+        array.push(item);
+      }
+      this.checkList.set(array);
+    });
   }
 
   constructor(private router: Router, private reservationService: ReservationService, private loginService: LoginService,
-              private paymentsService: PaymentsService, private reservationOrdersService: ReservationOrdersService) {}
+              private paymentsService: PaymentsService, private reservationOrdersService: ReservationOrdersService,
+              private utilityService: UtilityService) {}
 
   makeReservation() {
     if (this.customer == null) {
@@ -116,5 +139,15 @@ export class MakeReservation {
   getCurrentDate(): string {
     let now = new Date();
     return now.toISOString().slice(0, 10);
+  }
+
+  onItemChange(cl: checkListItem) {
+    if (cl.checked) {
+      this.reservationUtilities.push(cl.utility);
+      this.reservation.price += cl.utility.price;
+    } else {
+      this.reservationUtilities.splice(this.reservationUtilities.indexOf(cl.utility), 1);
+      this.reservation.price -= cl.utility.price;
+    }
   }
 }
